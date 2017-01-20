@@ -19404,33 +19404,12 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        //var update_scroll = function(event){
+        //  $(".reveal").scrollTop(0);
+        //};
 
-        Reveal.addEventListener('slidechanged', update_scroll);
-        
-        //SCROLL PATCH-TH
-        //via http://stackoverflow.com/a/35729707/454773
-        function resetSlideScrolling(slide) {
-		    $(slide).removeClass('scrollable-slide');
-		}
+        //Reveal.addEventListener('slidechanged', update_scroll);
 
-		function handleSlideScrolling(slide) {
-    		if ($(slide).height() >= 800) {
-        		$(slide).addClass('scrollable-slide');
-    		}
-		}
-
-		Reveal.addEventListener('ready', function (event) {
-    		handleSlideScrolling(event.currentSlide);
-		});
-
-		Reveal.addEventListener('slidechanged', function (event) {
-		    resetSlideScrolling(event.previousSlide)
-		    handleSlideScrolling(event.currentSlide);
-		});
-        //SCROLL PATCH
 
     }
 );
