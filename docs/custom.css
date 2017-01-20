@@ -1,0 +1,4 @@
+.scrollable-slide {
+    height: 800px;
+    overflow-y: auto !important;
+}
